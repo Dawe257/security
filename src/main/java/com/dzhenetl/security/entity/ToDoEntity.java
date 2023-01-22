@@ -10,7 +10,8 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-public class ToDo {
+@Table(name = "to_do")
+public class ToDoEntity {
 
     @Id
     @GeneratedValue(generator = "system-uuid")
@@ -26,8 +27,8 @@ public class ToDo {
     private LocalDateTime modified;
     private boolean completed;
 
-    public ToDo() {}
-    public ToDo(String description) {
+    public ToDoEntity() {}
+    public ToDoEntity(String description) {
         this.description = description;
     }
 
